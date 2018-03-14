@@ -22,7 +22,7 @@ class App extends Component {
     })
       .then(response => {
         this.setState({
-          currentUsername: username,
+          userId: username,
           currentScreen: 'ChatScreen',
         })
       })
@@ -35,7 +35,7 @@ class App extends Component {
     }
 
     if (this.state.currentScreen === 'ChatScreen') {
-      return <ChatScreen currentUsername={this.state.currentUsername} />
+      return <ChatScreen userId={this.state.userId} />
     }
   }
 }

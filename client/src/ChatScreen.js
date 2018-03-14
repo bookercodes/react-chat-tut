@@ -21,7 +21,7 @@ class ChatScreen extends Component {
   connectToChatkit() {
     const chatManager = new Chatkit.ChatManager({
       instanceLocator: 'v1:us1:542391ba-ff28-4674-a4ad-a464fd59f9f6',
-      userId: this.props.currentUsername,
+      userId: this.props.userId,
       tokenProvider: new Chatkit.TokenProvider({
         url: 'http://localhost:3001/authenticate',
       }),
