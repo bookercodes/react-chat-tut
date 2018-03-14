@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class WhatIsYourUsernameScreen extends Component {
+class UsernameForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -38,4 +38,4 @@ class WhatIsYourUsernameScreen extends Component {
   }
 }
 
-export default WhatIsYourUsernameScreen
+export default UsernameForm

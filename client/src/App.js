@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import WhatIsYourUsernameScreen from './WhatIsYourUsernameScreen'
+import UsernameForm from './components/UsernameForm'
 import ChatScreen from './ChatScreen'
-import axios from 'axios'
 
 class App extends Component {
   constructor() {
@@ -32,7 +31,7 @@ class App extends Component {
 
   render() {
     if (this.state.currentScreen === 'WhatIsYourUsernameScreen') {
-      return <WhatIsYourUsernameScreen onSubmit={this.onUsernameSubmitted} />
+      return <UsernameForm onSubmit={this.onUsernameSubmitted} />
     }
 
     if (this.state.currentScreen === 'ChatScreen') {
