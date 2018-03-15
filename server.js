@@ -1,5 +1,4 @@
 const express = require('express')
-const expressHandlebars = require('express-handlebars')
 const bodyParser = require('body-parser')
 const Chatkit = require('pusher-chatkit-server')
 const cors = require('cors')
@@ -12,8 +11,6 @@ const chatkit = new Chatkit.default({
     'c79c6866-4b06-4848-aca8-56d97a69d3a3:NCebZUHExpE1dhRCYIusaS6yuvYO1au7grCbFuA0oA8=',
 })
 
-app.engine('handlebars', expressHandlebars())
-app.set('view engine', 'handlebars')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(cors())
@@ -23,7 +20,6 @@ app.post('/authenticate', (req, res) => {
   res.json(chatkit.authenticate({ grant_type }, req.query.user_id))
 })
 
-//5536427
 app.post('/users', (req, res) => {
   const { username } = req.body
   chatkit
